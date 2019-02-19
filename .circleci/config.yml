@@ -21,14 +21,20 @@ jobs:
       - run:
           name: test
           command: yarn run test
+      - run:
+          name: eslint-report
+          command: yarn run lint:src:report
+      - run:
+          name: mocha-report
+          command: yarn run test:mocha:report
       # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
       - store_artifacts:
-          path: test-results.xml
-          prefix: tests
+          path: reports/eslint/results.xml
       - store_artifacts:
-          path: coverage
-          prefix: coverage
+          path: reports/mocha/results.xml
+      - store_artifacts:
+          path: coverage/lcov-report
       # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
       - store_test_results:
-          path: test-results.xml
+          path: reports
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples

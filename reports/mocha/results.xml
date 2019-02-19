@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.003" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-02-19T10:21:46" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="eva entrypoint" timestamp="2019-02-19T10:21:46" tests="1" file="/Users/arlo/Development/eva/src/index.test.js" failures="0" time="0.003">
+    <testcase name="eva entrypoint works" time="0.003" classname="works">
+    </testcase>
+  </testsuite>
+</testsuites>

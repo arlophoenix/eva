@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+<testsuite package="org.eslint" time="0" tests="1" errors="1" name="/Users/arlo/Development/eva/src/index.js">
+<testcase time="0" name="org.eslint.no-console"><failure message="Unexpected console statement."><![CDATA[line 3, col 5, Warning - Unexpected console statement. (no-console)]]></failure></testcase>
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/Users/arlo/Development/eva/src/index.test.js">
+<testcase time="0" name="/Users/arlo/Development/eva/src/index.test.js" />
+</testsuite>
+</testsuites>

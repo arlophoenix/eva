@@ -1,0 +1,95 @@
+{
+  "name": "eva",
+  "version": "1.0.0",
+  "description": "An ever evolving world",
+  "main": "build/index.js",
+  "repository": "https://github.com/arlophoenix/eva",
+  "author": "Arlo Armstrong",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-goodeggs": "7.3.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "goodeggs-test-helpers": "^6.5.1",
+    "husky": "^1.3.1",
+    "leasot": "^7.2.0",
+    "lint-staged": "^8.1.3",
+    "mocha": "^6.0.0",
+    "prettier": "^1.16.4",
+    "request": "^2.88.0"
+  },
+  "scripts": {
+    "build": "yarn run build:clean && yarn run build:transpile",
+    "build:clean": "rm -rf build",
+    "build:transpile": "babel src --out-dir build --copy-files",
+    "lint": "yarn run lint:src && yarn run lint:prettier",
+    "lint:src": "yarn run lint:src:glob '**/*.{js,ts}'",
+    "lint:src:glob": "eslint --ignore-path .gitignore",
+    "lint:prettier": "yarn run lint:prettier:glob '**/*.{yml,json,md}'",
+    "lint:prettier:glob": "prettier --ignore-path .gitignore --list-different",
+    "fmt": "yarn run fmt:src && yarn run fmt:prettier",
+    "fmt:src": "yarn run fmt:src:glob '**/*.{js,ts}'",
+    "fmt:src:glob": "eslint --ignore-path .gitignore --fix",
+    "fmt:prettier": "yarn run fmt:prettier:glob '**/*.{yml,json,md}'",
+    "fmt:prettier:glob": "prettier --ignore-path .gitignore --write",
+    "prepublishOnly": "yarn run build",
+    "postversion": "git push --follow-tags",
+    "tdd": "yarn run test:mocha --watch",
+    "test": "yarn run todos && yarn run lint && yarn run test:mocha",
+    "test:mocha": "yarn run test:mocha:glob 'src/**/*.test.{js,ts}'",
+    "test:mocha:glob": "NODE_ENV=test mocha --opts mocha.opts",
+    "todos": "yarn run todos:glob '**/*.{js,ts}'",
+    "todos:glob": "leasot --ignore='node_modules/**','build/**','.git/**'"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": 10
+          }
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "goodeggs"
+    ],
+    "extends": [
+      "plugin:goodeggs/goodeggs",
+      "prettier",
+      "plugin:prettier/recommended"
+    ],
+    "env": {
+      "node": true
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "yarn run fmt:src:glob",
+      "git add"
+    ],
+    "*.{yml,json,md}": [
+      "yarn run fmt:prettier:glob",
+      "git add"
+    ]
+  }
+}

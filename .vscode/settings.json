@@ -1,0 +1,10 @@
+{
+  "search.exclude": {
+    "**/build": true,
+    "**/coverage": true,
+    "**/node_modules": true,
+    "**/reports": true
+  },
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true
+}

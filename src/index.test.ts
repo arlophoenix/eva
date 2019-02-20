@@ -1,7 +1,7 @@
 import eva from ".";
 
-describe("eva entrypoint", function() {
-  it("works", function() {
+describe("eva entrypoint", () => {
+  it("works", () => {
     expect(() => eva.helloWorld()).not.toThrow();
   });
 });

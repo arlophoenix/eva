@@ -4,7 +4,11 @@
   "description": "An ever evolving world",
   "license": "MIT",
   "author": "Arlo Armstrong",
+  "homepage": "https://github.com/arlophoenix/eva",
   "repository": "https://github.com/arlophoenix/eva",
+  "bugs": {
+    "url": "https://github.com/arlophoenix/eva/issues"
+  },
   "version": "1.0.0",
   "main": "build/index.js",
   "scripts": {

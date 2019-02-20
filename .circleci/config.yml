@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: update-dependency-manager
-          command: 'sudo npm install -g yarn@^1.13.0'
+          command: "sudo npm install -g yarn@^1.13.0"
       # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
@@ -22,18 +22,13 @@ jobs:
           name: test
           command: yarn run test
       - run:
-          name: eslint-report
-          command: yarn run lint:src:report
-      - run:
-          name: mocha-report
-          command: yarn run test:mocha:report
+          name: copy-coverage
+          command: mkdir -p reports && cp coverage/clover.xml reports/jest/results.xml
       # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
       - store_artifacts:
-          path: reports/eslint/results.xml
+          path: reports/jest/results.xml
       - store_artifacts:
-          path: reports/mocha/results.xml
-      - store_artifacts:
-          path: coverage/lcov-report
+          path: coverage
       # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
       - store_test_results:
           path: reports

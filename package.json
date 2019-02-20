@@ -23,7 +23,7 @@
     "babel-plugin-istanbul": "^5.1.1",
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-goodeggs": "7.3.2",
+    "eslint-plugin-goodeggs": "7.4.0",
     "eslint-plugin-prettier": "^3.0.1",
     "goodeggs-test-helpers": "^6.5.1",
     "husky": "^1.3.1",

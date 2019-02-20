@@ -22,7 +22,7 @@
     "format:prettier:glob": "prettier --ignore-path .gitignore --write",
     "lint": "yarn run lint:prettier && yarn run lint:eslint",
     "lint:eslint": "yarn run lint:eslint:glob '**/*.{js,ts}'",
-    "lint:eslint:glob": "eslint --ignore-path .gitignore --cache --format=pretty",
+    "lint:eslint:glob": "eslint --ignore-path .gitignore --cache --format=pretty --max-warnings=0",
     "lint:eslint:report": "yarn run lint:eslint --format junit --output-file reports/junit/lint.xml",
     "lint:prettier": "yarn run lint:prettier:glob '**/*.{json,md,yaml,yml}' '.editorconfig'",
     "lint:prettier:glob": "prettier --ignore-path .gitignore --list-different",

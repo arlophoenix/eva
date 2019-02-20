@@ -7,9 +7,5 @@ module.exports = {
       files: ".editorconfig",
       options: { parser: "yaml" },
     },
-    {
-      files: "LICENSE",
-      options: { parser: "markdown" },
-    },
   ],
 };

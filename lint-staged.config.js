@@ -6,7 +6,6 @@ module.exports = {
     "**/*.{json,md,yaml,yml}": ["yarn run format:prettier:glob", "git add"],
     "**/*.{js,ts}": [
       "yarn run format:import:glob",
-      "yarn run format:prettier:glob",
       "yarn run format:eslint:glob",
       "git add",
     ],

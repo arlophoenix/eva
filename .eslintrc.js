@@ -6,6 +6,7 @@ module.exports = {
     "jest",
     "promise",
     "unicorn",
+    "prettier",
   ],
   extends: [
     "airbnb-typescript",
@@ -16,6 +17,7 @@ module.exports = {
     "plugin:unicorn/recommended",
     "prettier",
     "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
   ],
   env: {
     node: true,

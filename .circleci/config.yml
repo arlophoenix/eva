@@ -19,17 +19,17 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: test
-          command: yarn run test
+          name: lint
+          command: yarn run lint:eslint:report
       - run:
-          name: copy-coverage
-          command: mkdir -p reports/jest && cp coverage/clover.xml reports/jest/results.xml
+          name: test
+          command: yarn run test:jest:report
       # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
       - store_artifacts:
-          path: reports/jest/results.xml
-      - store_artifacts:
           path: coverage
+      - store_artifacts:
+          path: reports/junit
       # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
       - store_test_results:
-          path: reports
+          path: reports/junit
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples

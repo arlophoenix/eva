@@ -34,7 +34,7 @@
     "tdd": "jest --watch",
     "test": "yarn run todos && yarn run lint && yarn run test:jest",
     "test:jest": "jest --passWithNoTests --coverage",
-    "test:jest:report": "JEST_JUNIT_OUTPUT=reports/junit/tests.xml yarn run test:jest --ci --runInBand --reporters=default --reporters=jest-junit",
+    "test:jest:report": "JEST_JUNIT_OUTPUT=reports/junit/tests.xml yarn run test:jest --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
     "todos": "yarn run todos:glob '**/*.{js,ts}'",
     "todos:glob": "leasot --ignore='node_modules/**','build/**','.git/**'",
     "types": "tsc",

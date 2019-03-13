@@ -71,7 +71,7 @@
     "import-sort-parser-babylon": "^6.0.0",
     "import-sort-parser-typescript": "^6.0.0",
     "import-sort-style-module": "^6.0.0",
-    "jest": "^24.4.0",
+    "jest": "^24.5.0",
     "jest-junit": "^6.3.0",
     "leasot": "^7.3.4",
     "lint-staged": "^8.1.5",

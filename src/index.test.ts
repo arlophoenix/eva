@@ -1,7 +1,7 @@
-import eva from ".";
+import { main } from ".";
 
 describe("eva entrypoint", () => {
   it("works", () => {
-    expect(() => eva.helloWorld()).not.toThrow();
+    expect(() => main.helloWorld()).not.toThrow();
   });
 });

@@ -6022,10 +6022,10 @@ trim-right@^1.0.1:
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
-ts-toolkit@^2.1.15:
-  version "2.1.15"
-  resolved "https://registry.yarnpkg.com/ts-toolkit/-/ts-toolkit-2.1.15.tgz#0b4fa66b91b971b81dfae453cb0d8c1fbbd4eabb"
-  integrity sha512-9bIdBjZr66nTIeSjUP1T2jL3SGHbvX3igE93j7ImWsuSQnSbR4/oeLsxwVailE9D3Xgy4gtm5mWIivlObYVypg==
+ts-toolkit@^2.1.16:
+  version "2.1.16"
+  resolved "https://registry.yarnpkg.com/ts-toolkit/-/ts-toolkit-2.1.16.tgz#eccd684152a5baf3f6e2da9b5e41e3ee66416a88"
+  integrity sha512-fsR+xcHDNM5rV8dj9WrPpTctQSkssUnDO6fy/oF59WPRPqRM458KLxE5+RP4o+DbBCancew+ELfjbDLTpScYXg==
   dependencies:
     "@babel/cli" "^7.2.3"
     "@babel/core" "^7.4.0"

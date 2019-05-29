@@ -19,7 +19,7 @@
     "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "ts-toolkit": "^2.1.16"
+    "ts-toolkit": "^6.1.0"
   },
   "engines": {
     "node": "^10.14.1",
